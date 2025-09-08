@@ -183,7 +183,6 @@ def plot_color_line_matches_opencv(image, lines, save_path='./', correct_matches
     for l in lines:
         if black:
             image = np.zeros_like(image)
-            image = np.ones_like(image) * 255
 
         for i in range(n_lines):
             start_point = tuple(map(int, l[i, 0]))

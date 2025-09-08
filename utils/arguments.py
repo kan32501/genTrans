@@ -18,42 +18,39 @@ def parse_args():
     # height and width of the transition frames
     parser.add_argument("--height",
                             type=int,
-                            default=1024
+                            default=576
                         )
     parser.add_argument("--width",
                             type=int,
-                            default=576
+                            default=1024
                         )
     
     # number of inbetween frames to generate
-    parser.add_argument("-n",
-                        "--frame_count",
+    parser.add_argument("--frame_count",
                             type=int,
-                            default=12
+                            default=13
                         )
     
     # input video frames' directories
-    parser.add_argument("-va",
-                        "--video0_frames_dir", 
-                            type=str, 
-                            default="./example/videos/skatepark"
+    parser.add_argument("--video0_frames_dir", 
+                        type=str, 
+                        default="./example/videos/turtle"
                         )
-    parser.add_argument("-vb",
-                        "--videoN_frames_dir", 
-                            type=str, 
-                            default="./example/videos/motorcycle"
+    parser.add_argument("--videoN_frames_dir", 
+                        type=str, 
+                        default="./example/videos/tiger"
                         )
 
-    # masks for keyframes 
-    parser.add_argument("-ma",
-                        "--frame0_mask_path", 
-                            type=str, 
-                            default="./example/masks/skatepark-79_mask.png"
+    # start frame mask from videoA
+    parser.add_argument("--frame0_mask_path", 
+                        type=str, 
+                        default="./example/masks/turtle-60_mask.png"
                         )
-    parser.add_argument("-mb",
-                        "--frameN_mask_path", 
-                            type=str, 
-                            default="./example/masks/motorcycle-0_mask.png"
+    
+    # end frame mask from videoB
+    parser.add_argument("--frameN_mask_path", 
+                        type=str, 
+                        default="./example/masks/tiger-0_mask.png"
                         )
 
     # assign the arguments to objects in the parser in one go

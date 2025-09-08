@@ -126,9 +126,7 @@ def get_input_frames_by_index(video0_frames_dir, videoN_frames_dir, frame0_mask_
 
 def save_out_frames(inbetween_images, 
                     out_frames_name, out_frames_dir, gif_dir,
-                    bef_and_aft=True, 
-                    video0_frames_dir=None, frame0_index=-1, 
-                    videoN_frames_dir=None, frameN_index=-1,
+                    bef_and_aft=True, video0_frames_dir=None, videoN_frames_dir=None,
                     width=-1, height=-1):
     """
     Saves the list of frame0s (optional) + inbetween frames + frameNs (optional) PIL images as
@@ -144,9 +142,7 @@ def save_out_frames(inbetween_images,
         out_frames_dir (string) : directory to save the final output PNG frames
         gif_dir (string) : directory to save the gif
         video0_frames_dir (string) : directory of the PNG frames from start video
-        frame0_index (int) : index of the selected frame in start video
         videoN_frames_dir (string) : directory of the PNG frames from end video
-        frameN_index (int) : index of the selected frame in end video
         bef_and_aft (bool): whether to save the before & after frames or not
 
     Returns
@@ -166,7 +162,7 @@ def save_out_frames(inbetween_images,
         # convert all preceding frames from start video up until frame0_prev_index into PIL Images
         video0_frames_list = os.listdir(video0_frames_dir) # all filepaths in start video
         video0_frames_PIL = [Image.open(os.path.join(video0_frames_dir, video0_frame_path_i)).convert('RGB')
-                        for video0_frame_path_i in video0_frames_list[:frame0_index + 1]]
+                        for video0_frame_path_i in video0_frames_list[:-1]]
         # save in out_frames_dir
         for video0_frame in video0_frames_PIL:
             # frame filename is xx.png
@@ -195,7 +191,7 @@ def save_out_frames(inbetween_images,
         # convert all frames from end video after frameN_next_index into PIL Images
         videoN_frames_list = os.listdir(videoN_frames_dir) # all filepaths in start video
         videoN_frames_PIL = [Image.open(os.path.join(videoN_frames_dir, videoN_frame_path_i)).convert('RGB') 
-                    for videoN_frame_path_i in videoN_frames_list[(frameN_index + 1):]]
+                    for videoN_frame_path_i in videoN_frames_list[1:]]
         # save in out_frames_dir
         for videoN_frame in videoN_frames_PIL:
             # frame filename is xx.png

@@ -14,27 +14,6 @@ def generate_transition(args, GlueStick_model, FCVG_model, SEARAFT_model, progre
     # create a new numbered directory for this iterations in /results, with subfolders
     curr_trial_dir, inputs_dir, conditions_dir, out_frames_dir = init_results_dirs(args.output_dir)
 
-    """
-    # produce baseline transition using a simple cross dissolve to compare against:
-    # WARNING: this takes a long time
-    # make out_frames_dir
-    x_dissolve_frames_dir = os.path.join(curr_trial_dir, "xdissolve_out_frames")
-    if not os.path.exists(out_frames_dir): os.mkdir(out_frames_dir)
-
-    # get the cross dissolve frames
-    start_frame = Image.open(os.path.join(args.video0_frames_dir, os.listdir(args.video0_frames_dir)[args.frame0_index]))
-    end_frame = Image.open(os.path.join(args.videoN_frames_dir, os.listdir(args.videoN_frames_dir)[args.frameN_index]))
-    x_dissolve_frames = cross_dissolve(start_frame, end_frame, args.frame_count, args.width, args.height)
-
-    # save the frames
-    save_out_frames(x_dissolve_frames, 
-                    "xdissolve", x_dissolve_frames_dir, curr_trial_dir,
-                    bef_and_aft=True,
-                    video0_frames_dir=args.video0_frames_dir, frame0_index=args.frame0_index, 
-                    videoN_frames_dir=args.videoN_frames_dir, frameN_index=args.frameN_index, 
-                    width=args.width, height=args.height)
-
-    """
     # get input frames
     inputs = get_input_frames_by_index(args.video0_frames_dir, args.videoN_frames_dir, 
                                        args.frame0_mask_path, args.frameN_mask_path,
@@ -93,9 +72,6 @@ def generate_transition(args, GlueStick_model, FCVG_model, SEARAFT_model, progre
     framewise_cond_imgs = plot_condition_imgs(frame0, interped_lines, lw=2, save=True, out_dir=conditions_dir) 
     # progress update
     if progress: print("-> Generated frame-wise conditions")
-    
-    # interped_lines_flow = apply_flow_to_lines(interped_lines, interped_flow)
-    # visualize_lines(interped_lines_flow, curr_trial_dir, args.width, args.height)
 
     # run inference on diffusion model 
     if progress: print("-> Running video diffusion pipeline")
@@ -118,19 +94,11 @@ def generate_transition(args, GlueStick_model, FCVG_model, SEARAFT_model, progre
     
     # flatten the output into one list of result images
     inbetween_frames = [img for sublist in video_frames for img in sublist]
-    # inbetween_frames_flow = [apply_flow_to_image(inbetween_frames[i], interped_flow[i]) for i in range(len(inbetween_frames))]
-
-    # # output the baseline as a gif
-    # baseline_frames_path = "./example/nikolaisavic/f1_surf_DM"
-    # baseline_frames = sorted(os.listdir(baseline_frames_path))
-    # inbetween_frames = [Image.open(os.path.join(baseline_frames_path, frame)).convert("RGB").resize((args.width, args.height)) for frame in baseline_frames]
 
     # save generated inbetween frames as PNGs and as a gif in results/xxx/out_frames
     out_gif_path, out_frames = save_out_frames(inbetween_frames, 
                                                "morphwarp", out_frames_dir, curr_trial_dir,
-                                               bef_and_aft=True,
-                                               video0_frames_dir=args.video0_frames_dir, frame0_index=args.frame0_index,
-                                               videoN_frames_dir=args.videoN_frames_dir, frameN_index=args.frameN_index,
+                                               video0_frames_dir=args.video0_frames_dir, videoN_frames_dir=args.videoN_frames_dir,
                                                width=args.width, height=args.height)
     print("–– OUTPUT TRANSITION GIF SAVED IN " + out_gif_path + " ––")
 
