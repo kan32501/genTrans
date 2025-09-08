@@ -62,7 +62,7 @@
 
 ```shell
 git clone https://github.com/kan32501/MaskMorpher.git
-cd FCVG
+cd MaskMorpher
 ```
 
 ```
