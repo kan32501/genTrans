@@ -92,13 +92,13 @@ Run. Decrease `-n` to < 10 if receing `CUDA error: out of memory`
 $ python main.py -n 12 -va "./example/video/turtle" -vb "./example/video/tiger" -ma "./example/masks/turtle-60_mask.png" -mb "./example/masks/tiger-0_mask.png"
 ```
 
-4. Download a model from SEARAFT model files [here](https://drive.google.com/drive/folders/1YLovlvUW94vciWvTyLf-p3uWscbOQRWW). Then move it into `./models/searaft/models`
+4. Download a model from SEARAFT model files [here](https://drive.google.com/drive/folders/1YLovlvUW94vciWvTyLf-p3uWscbOQRWW). Then move it into `./models/searaft/models` . Then set `--SEARAFT_path` in `arguments.py` as `./models/SEARAFT/models/<MODEL-NAME>.pth`
 
 See `arguments.py` to customize input parameters.
 
 >   -n : number of intermediate frames, default=12\
->   -va : path to directory of frames in videoA\
->   -vb : path to directory of frames in videoB\
+>   -a : path to directory of frames in videoA\
+>   -b : path to directory of frames in videoB\
 >   -ma: path to mask for last frame in videoA\
 >   -mb: path to mask for first frame in videoB\
 >   --height : output frames height, default is 576\
