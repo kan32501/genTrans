@@ -73,15 +73,15 @@ pip install -r requirements.txt
 
 #### 2. Download required base models
 
-1. Download the [Gluestick](https://github.com/cvg/GlueStick) weights and put them in './models/resources/weights'.
+1. Download the [Gluestick](https://github.com/cvg/GlueStick) weights and put them in `./models/resources/weights`.
 
    ```
    wget https://github.com/cvg/GlueStick/releases/download/v0.1_arxiv/checkpoint_GlueStick_MD.tar -P models/resources/weights
    ```
 
-2. Download the  [DWPose](https://github.com/IDEA-Research/DWPose) pretrained weights dw-ll_ucoco_384.onnx and yolox_l.onnx [here](https://drive.google.com/drive/folders/1Ftv-jR4R8VtnOyy38EVLRa0yLz0-BnUY?usp=sharing), then put them in './checkpoints/dwpose'. 
+2. Download the  [DWPose](https://github.com/IDEA-Research/DWPose) pretrained weights `dw-ll_ucoco_384.onnx` and `yolox_l.onnx` [here](https://drive.google.com/drive/folders/1Ftv-jR4R8VtnOyy38EVLRa0yLz0-BnUY?usp=sharing), then put them in `./checkpoints/dwpose`. 
 
-3. Download the FCVG model [here](https://drive.google.com/drive/folders/1qIvr9WO8qk3NUdztxweTmexfkHt8oRDB?usp=sharing), put them in './checkpoints'
+3. Download the FCVG model [here](https://drive.google.com/drive/folders/1qIvr9WO8qk3NUdztxweTmexfkHt8oRDB?usp=sharing), put them in `./checkpoints`
 
 #### 3. Run the inference script
 
@@ -93,15 +93,15 @@ python main.py
 
 See `arguments.py` to customize input parameters.
 
->   --height : output frames height, default is 576
->   --width: output frames width, default is 1024
->   --frame_count : number of intermediate frames
->   --video0_frames_dir : path to directory of frames in first video
->   --videoN_frames_dir : path to directory of frames in second video
->   --frame0_mask_path: path to mask for last frame in first video
->   --frameN_mask_path: path to mask for first frame in second video
+>   --height : output frames height, default is 576\
+>   --width: output frames width, default is 1024\
+>   --frame_count : number of intermediate frames\
+>   --video0_frames_dir : path to directory of frames in first video\
+>   --videoN_frames_dir : path to directory of frames in second video\
+>   --frame0_mask_path: path to mask for last frame in first video\
+>   --frameN_mask_path: path to mask for first frame in second video\
 
 
 ## Acknowledgements
 
-Thanks for the work of [Frame-wise Conditions-driven Video Generation]([https://github.com/dvlab-research/ControlNeXt](https://github.com/Tian-one/FCVG)) &  [SEA-RAFT](https://github.com/princeton-vl/SEA-RAFT?tab=readme-ov-file). Our code is based on the implementation of them.
+Thanks for the work of [Frame-wise Conditions-driven Video Generation](https://github.com/Tian-one/FCVG) &  [SEA-RAFT](https://github.com/princeton-vl/SEA-RAFT?tab=readme-ov-file). Our code is based on the implementation of them.
