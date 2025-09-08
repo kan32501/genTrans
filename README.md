@@ -8,6 +8,12 @@ MSc Dissertation: Generative Video Transitions. UCL Computer Graphics, Vision, a
 
 Animated Transition Results
 
+<style>
+  div.container {
+    display:inline-block;
+  }
+</style>
+
 <div class="row">
   <div class="column">
     <img src=readme_results/tshirt_to_street_ours.gif width="250">
