@@ -85,16 +85,17 @@ $ wget https://github.com/cvg/GlueStick/releases/download/v0.1_arxiv/checkpoint_
 
 3. Download the FCVG model [here](https://drive.google.com/drive/folders/1qIvr9WO8qk3NUdztxweTmexfkHt8oRDB?usp=sharing), put them in `./checkpoints`
 
-#### 3. Run the inference script
-
-Run. Decrease `-n` to < 10 if receing `CUDA error: out of memory`
-```bash
-$ python main.py -n 12 -va "./example/video/turtle" -vb "./example/video/tiger" -ma "./example/masks/turtle-60_mask.png" -mb "./example/masks/tiger-0_mask.png"
-```
-
 4. Download a model from SEARAFT model files [here](https://drive.google.com/drive/folders/1YLovlvUW94vciWvTyLf-p3uWscbOQRWW). Then move it into `./models/searaft/models` . Then set `--SEARAFT_path` in `arguments.py` as `./models/SEARAFT/models/<MODEL-NAME>.pth`
 
-See `arguments.py` to customize input parameters.
+#### 3. Run the inference script
+
+Run.
+
+```bash
+$ python main.py
+```
+
+See `arguments.py` to customize input parameters. Decrease `-n` to < 10 if receing `CUDA error: out of memory
 
 >   -n : number of intermediate frames, default=12\
 >   -a : path to directory of frames in videoA\
