@@ -1,58 +1,62 @@
 # MaskMorpher: Generating Video Transitions with Line Matches
 ### Mia Kan
 
-MSc Computer Graphics, Vision, and Imaging Thesis, Sep 2025
+Sep 2025
+MSc Dissertation: Generative Video Transitions. UCL Computer Graphics, Vision, and Imaging
 
 ## Results
 
+Animated Transition Results
+
+Baseline Comparisons
+
 <table class="center">
     <tr style="font-weight: bolder;text-align:center;">
-        <td>Input starting frame</td>
-        <td>Input ending frame</td>
-        <td>Inbetweening results</td>
+        <td>Ours</td>
+        <td>Cross-Dissolve</td>
+        <td><a href="https://arxiv.org/abs/2312.07409">DiffMorpher</td>
+        <td><a href="https://arxiv.org/abs/2111.14818">Blended Diffusio</a></td>
     </tr>
   <tr>
   <td>
-    <img src=example/real/003/00.png width="250">
+    <img src=readme_results/turtle_tiger_ours.gif width="250">
   </td>
   <td>
-    <img src=example/real/003/24.png width="250">
+    <img src=readme_results/turtle_tiger_xdis.gif width="250">
   </td>
   <td>
-    <img src=example/real/003/out.gif width="250">
-  </td>
-  </tr>
-  <tr>
-  <td>
-    <img src=example/real/002/00.png width="250">
+    <img src=readme_results/turtle_tiger_DM.gif width="250">
   </td>
   <td>
-    <img src=example/real/002/24.png width="250">
-  </td>
-  <td>
-    <img src=example/real/002/out.gif width="250">
+    <img src=readme_results/turtle_tiger_BD.gif width="250">
   </td>
   </tr>
   <tr>
   <td>
-    <img src=example/animation/003/00.jpg width="250">
+    <img src=readme_results/f1_surf_ours.gif width="250">
   </td>
   <td>
-    <img src=example/animation/003/24.jpg width="250">
+    <img src=readme_results/f1_surf_XD.gif width="250">
   </td>
   <td>
-    <img src=example/animation/003/out.gif width="250">
+    <img src=readme_results/f1_surf_DM.gif width="250">
   </td>
-  </tr> 
+  <td>
+    <img src=readme_results/f1_surfr_BD.gif width="250">
+  </td>
+  </tr>
   <tr>
   <td>
-    <img src=example/animation/002/00.png width="250">
+    <img src=readme_results/skyscraper_helicoper_ours.gif width="250">
   </td>
   <td>
-    <img src=example/animation/002/24.png width="250">
+    <img src=readme_results/skyscraper_helicoper_xdis.gif width="250">
   </td>
   <td>
-    <img src=example/animation/002/out.gif width="250">
+    <img src=readme_results/skyscraper_helicoper_DM.gif width="250">
+  </td>
+  <td>
+    <img src=readme_results/skyscraper_helicoper_BD.gif width="250">
   </td>
   </tr> 
 </table>
