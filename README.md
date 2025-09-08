@@ -1,7 +1,7 @@
 # MaskMorpher: Generating Video Transitions with Line Matches
 ### Mia Kan
 
-MSc Computer Graphics, Vision, and Imaging Thesis
+MSc Computer Graphics, Vision, and Imaging Thesis, Sep 2025
 
 ## Results
 
@@ -91,6 +91,8 @@ Run. Decrease `-n` to < 10 if receing `CUDA error: out of memory`
 ```bash
 $ python main.py -n 12 -va "./example/video/turtle" -vb "./example/video/tiger" -ma "./example/masks/turtle-60_mask.png" -mb "./example/masks/tiger-0_mask.png"
 ```
+
+4. Download a model from SEARAFT model files [here](https://drive.google.com/drive/folders/1YLovlvUW94vciWvTyLf-p3uWscbOQRWW). Then move it into `./models/searaft/models`
 
 See `arguments.py` to customize input parameters.
 
