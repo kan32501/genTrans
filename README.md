@@ -1,5 +1,7 @@
 # MaskMorpher: Generating Video Transitions with Line Matches
-#### Mia Kan
+### Mia Kan
+
+MSc Computer Graphics, Vision, and Imaging Thesis
 
 ## Results
 
@@ -58,7 +60,7 @@
 
 
 ## Startup Guide
-#### 1. Setup environment
+#### 1. Setup conda environment
 
 ```shell
 git clone https://github.com/kan32501/MaskMorpher.git
