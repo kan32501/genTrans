@@ -10,7 +10,7 @@ Animated Transition Results
 
 <p float="left">
   <img src="readme_results/tshirt_to_street_ours.gif" width="200" />
-  <img src="readme_results/drill_wakeboard.gif" width="200" />
+  <img src="readme_results/bicycle_wakeboard.gif" width="200" />
   <img src="readme_results/fish_lioness.gif" width="200" />
 </p>
 
