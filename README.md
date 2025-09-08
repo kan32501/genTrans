@@ -9,9 +9,22 @@ MSc Dissertation: Generative Video Transitions. UCL Computer Graphics, Vision, a
 Animated Transition Results
 
 <style>
-  div.container {
-    display:inline-block;
-  }
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 </style>
 
 <div class="row">
