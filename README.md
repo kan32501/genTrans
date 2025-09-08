@@ -97,11 +97,11 @@ $ python main.py
 
 See `arguments.py` to customize input parameters. Decrease `-n` to < 10 if receing `CUDA error: out of memory
 
->   -n : number of intermediate frames, default=12\
->   -a : path to directory of frames in videoA\
->   -b : path to directory of frames in videoB\
->   -ma: path to mask for last frame in videoA\
->   -mb: path to mask for first frame in videoB\
+>   -frame_count : number of intermediate frames, default=12\
+>   -video0_frames_dir : path to directory of frames in videoA\
+>   -videoN_frames_dir : path to directory of frames in videoB\
+>   -frame0_mask_path: path to mask for last frame in videoA\
+>   -frameN_mask_path: path to mask for first frame in videoB\
 >   --height : output frames height, default is 576\
 >   --width: output frames width, default is 1024\
 
