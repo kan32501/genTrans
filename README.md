@@ -15,48 +15,48 @@ Baseline Comparisons
         <td>Ours</td>
         <td>Cross-Dissolve</td>
         <td><a href="https://arxiv.org/abs/2312.07409">DiffMorpher</td>
-        <td><a href="https://arxiv.org/abs/2111.14818">Blended Diffusio</a></td>
+        <td><a href="https://arxiv.org/abs/2111.14818">Blended Diffusion</a></td>
     </tr>
   <tr>
   <td>
-    <img src=readme_results/turtle_tiger_ours.gif width="250">
+    <img src=readme_results/turtle_tiger_ours.gif width="150">
   </td>
   <td>
-    <img src=readme_results/turtle_tiger_xdis.gif width="250">
+    <img src=readme_results/turtle_tiger_xdis.gif width="150">
   </td>
   <td>
-    <img src=readme_results/turtle_tiger_DM.gif width="250">
+    <img src=readme_results/turtle_tiger_DM.gif width="150">
   </td>
   <td>
-    <img src=readme_results/turtle_tiger_BD.gif width="250">
-  </td>
-  </tr>
-  <tr>
-  <td>
-    <img src=readme_results/f1_surf_ours.gif width="250">
-  </td>
-  <td>
-    <img src=readme_results/f1_surf_XD.gif width="250">
-  </td>
-  <td>
-    <img src=readme_results/f1_surf_DM.gif width="250">
-  </td>
-  <td>
-    <img src=readme_results/f1_surfr_BD.gif width="250">
+    <img src=readme_results/turtle_tiger_BD.gif width="150">
   </td>
   </tr>
   <tr>
   <td>
-    <img src=readme_results/skyscraper_helicoper_ours.gif width="250">
+    <img src=readme_results/f1_surf_ours.gif width="150">
   </td>
   <td>
-    <img src=readme_results/skyscraper_helicoper_xdis.gif width="250">
+    <img src=readme_results/f1_surf_xdis.gif width="150">
   </td>
   <td>
-    <img src=readme_results/skyscraper_helicoper_DM.gif width="250">
+    <img src=readme_results/f1_surf_DM.gif width="150">
   </td>
   <td>
-    <img src=readme_results/skyscraper_helicoper_BD.gif width="250">
+    <img src=readme_results/f1_surf_BD.gif width="150">
+  </td>
+  </tr>
+  <tr>
+  <td>
+    <img src=readme_results/skyscraper_heliski_ours.gif width="150">
+  </td>
+  <td>
+    <img src=readme_results/skyscraper_heliski_xdis.gif width="150">
+  </td>
+  <td>
+    <img src=readme_results/skyscraper_heliski_DM.gif width="150">
+  </td>
+  <td>
+    <img src=readme_results/skyscraper_heliski_BD.gif width="150">
   </td>
   </tr> 
 </table>
