@@ -5,3 +5,5 @@ checkpoints/dwpose/yolox_l.onnx
 models/resources/weights/checkpoint_GlueStick_MD.tar
 models/resources/weights/superpoint_v1.pth
 models/SEARAFT/models/Tartan-C-T-TSKH-kitti432x960-M.pth
+!/readme_results/
+!/readme_results/** 
