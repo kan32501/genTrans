@@ -18,57 +18,42 @@ def parse_args():
     # height and width of the transition frames
     parser.add_argument("--height",
                             type=int,
-                            default=576
+                            default=1024
                         )
     parser.add_argument("--width",
                             type=int,
-                            default=1024
+                            default=576
                         )
     
     # number of inbetween frames to generate
-    parser.add_argument("--frame_count",
+    parser.add_argument("-n",
+                        "--frame_count",
                             type=int,
-                            default=13
-                        )
-   
-    # input video paths
-    parser.add_argument("--video0_path", 
-                        type=str, 
-                        default="./example/powder.mp4"
-                        )
-    parser.add_argument("--videoN_path", 
-                        type=str, 
-                        default="./example/longboard.mp4"
+                            default=12
                         )
     
     # input video frames' directories
-    parser.add_argument("--video0_frames_dir", 
-                        type=str, 
-                        default="./example/turtle"
+    parser.add_argument("-va",
+                        "--video0_frames_dir", 
+                            type=str, 
+                            default="./example/videos/skatepark"
                         )
-    parser.add_argument("--videoN_frames_dir", 
-                        type=str, 
-                        default="./example/tiger"
+    parser.add_argument("-vb",
+                        "--videoN_frames_dir", 
+                            type=str, 
+                            default="./example/videos/motorcycle"
                         )
 
-    # start frame index & start frame mask from video1
-    parser.add_argument("--frame0_index",
-                        type=int, 
-                        default=67 # 15 for tshirt, 22 for handkerchief, 24 for elf, 20 for candy, 71 for skateboard, 53 for snowboard
+    # masks for keyframes 
+    parser.add_argument("-ma",
+                        "--frame0_mask_path", 
+                            type=str, 
+                            default="./example/masks/skatepark-79_mask.png"
                         )
-    parser.add_argument("--frame0_mask_path", 
-                        type=str, 
-                        default="./example/masks/turtle-60_mask.png"
-                        )
-    
-    # end frame index & end frame mask from video2
-    parser.add_argument("--frameN_index",
-                        type=int, 
-                        default=0 # 58 for street, 63 for cruise, 77 for beach, 81 for cloud, 1 for motorcycle
-                        )
-    parser.add_argument("--frameN_mask_path", 
-                        type=str, 
-                        default="./example/masks/tiger-0_mask.png"
+    parser.add_argument("-mb",
+                        "--frameN_mask_path", 
+                            type=str, 
+                            default="./example/masks/motorcycle-0_mask.png"
                         )
 
     # assign the arguments to objects in the parser in one go
