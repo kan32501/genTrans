@@ -1,6 +1,6 @@
 *
 !.gitignore
-!turtle
-!tiger
-!f1
-!surf
+!/turtle
+!/tiger
+!/f1
+!/surf
