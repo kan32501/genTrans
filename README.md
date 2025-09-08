@@ -1,15 +1,7 @@
-## TO BE REVISED
+# MaskMorpher: Generating Video Transitions with Line Matches
+#### Mia Kan
 
-# Generative Inbetweening through Frame-wise Conditions-Driven Video Generation
-#### Tianyi Zhu,  Dongwei Ren, Qilong Wang, Xiaohe Wu, Wangmeng Zuo
-This repository is the official PyTorch implementation of "Generative Inbetweening through Frame-wise Conditions-Driven Video Generation".
-
-[![arXiv](https://img.shields.io/badge/arXiv-2412.11755-b31b1b.svg)](https://arxiv.org/abs/2412.11755)
-[![Project Page](https://img.shields.io/badge/Project-Website-green)](https://fcvg-inbetween.github.io/)
-
-🎉 Our paper is accepted by CVPR 2025
-
-## 🖼️ Results
+## Results
 
 <table class="center">
     <tr style="font-weight: bolder;text-align:center;">
@@ -65,23 +57,23 @@ This repository is the official PyTorch implementation of "Generative Inbetweeni
 
 
 
-## ⚙️ Run inference demo
+## Startup Guide
 #### 1. Setup environment
 
 ```shell
-git clone https://github.com/Tian-one/FCVG.git
+git clone https://github.com/kan32501/MaskMorpher.git
 cd FCVG
 ```
 
 ```
-conda create -n FCVG python=3.10.14
-conda activate FCVG
+conda create -n MaskMorpher python=3.10.14
+conda activate MaskMorpher
 pip install -r requirements.txt
 ```
 
-#### 2. Download models
+#### 2. Download required base models
 
-1. Download the [Gluestick](https://github.com/cvg/GlueStick) weights and put them in './models/resources'.
+1. Download the [Gluestick](https://github.com/cvg/GlueStick) weights and put them in './models/resources/weights'.
 
    ```
    wget https://github.com/cvg/GlueStick/releases/download/v0.1_arxiv/checkpoint_GlueStick_MD.tar -P models/resources/weights
@@ -89,54 +81,27 @@ pip install -r requirements.txt
 
 2. Download the  [DWPose](https://github.com/IDEA-Research/DWPose) pretrained weights dw-ll_ucoco_384.onnx and yolox_l.onnx [here](https://drive.google.com/drive/folders/1Ftv-jR4R8VtnOyy38EVLRa0yLz0-BnUY?usp=sharing), then put them in './checkpoints/dwpose'. 
 
-3. Download our FCVG model [here](https://drive.google.com/drive/folders/1qIvr9WO8qk3NUdztxweTmexfkHt8oRDB?usp=sharing), put them in './checkpoints'
+3. Download the FCVG model [here](https://drive.google.com/drive/folders/1qIvr9WO8qk3NUdztxweTmexfkHt8oRDB?usp=sharing), put them in './checkpoints'
 
 #### 3. Run the inference script
 
-Run inference with default setting:
-
-``` shell
-bash demo.sh
-```
-
-or run
+Run
 
 ```
-python demo_FCVG.py 
+python main.py 
 ```
 
->   --pretrained_model_name_or_path: pretrained SVD model folder, we fintune models based on [SVD-XT1.1](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1)\
->   --controlnext_path:  [ControlNeXt](https://github.com/dvlab-research/ControlNeXt) model path\
->   --unet_path: finetuned unet model path\
->   --image1_path: start frame path\
->   --image2_path: end frame path\
->   --output_dir: folder path to save the results\
->   --control_weight: frame-wise condition control weight, default is 1.0\
->   --num_inference_steps: diffusion denoise steps, default is 25\
->   --height : input frames height, default is 576\
->   --width: input frames width, default is 1024
+See `arguments.py` to customize input parameters.
+
+>   --height : output frames height, default is 576
+>   --width: output frames width, default is 1024
+>   --frame_count : number of intermediate frames
+>   --video0_frames_dir : path to directory of frames in first video
+>   --videoN_frames_dir : path to directory of frames in second video
+>   --frame0_mask_path: path to mask for last frame in first video
+>   --frameN_mask_path: path to mask for first frame in second video
 
 
+## Acknowledgements
 
-## ✨ Datasets
-
-You can download our test dataset [here](https://drive.google.com/file/d/1PBPJL1W_VjaK7PwXIx6T4KV3cVD0dT4L/view?usp=drive_link).
-
-
-
-## 🖊️ Citation
-
-```bibtex
-@article{zhu2024generative,
-  title={Generative Inbetweening through Frame-wise Conditions-Driven Video Generation},
-  author={Zhu, Tianyi and Ren, Dongwei and Wang, Qilong and Wu, Xiaohe and Zuo, Wangmeng},
-  journal={arXiv preprint arXiv:2412.11755},
-  year={2024}
-}
-```
-
-
-
-## 💞 Acknowledgements
-
-Thanks for the work of [ControlNeXt](https://github.com/dvlab-research/ControlNeXt), [svd_keyframe_interpolation](https://github.com/jeanne-wang/svd_keyframe_interpolation), [GlueStick](https://github.com/cvg/GlueStick), [DWPose](https://github.com/IDEA-Research/DWPose). Our code is based on the implementation of them.
+Thanks for the work of [Frame-wise Conditions-driven Video Generation]([https://github.com/dvlab-research/ControlNeXt](https://github.com/Tian-one/FCVG)) &  [SEA-RAFT](https://github.com/princeton-vl/SEA-RAFT?tab=readme-ov-file). Our code is based on the implementation of them.
