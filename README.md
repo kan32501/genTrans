@@ -19,44 +19,44 @@ Baseline Comparisons
     </tr>
   <tr>
   <td>
-    <img src=readme_results/turtle_tiger_ours.gif width="150">
+    <img src=readme_results/turtle_tiger_ours.gif width="200">
   </td>
   <td>
-    <img src=readme_results/turtle_tiger_xdis.gif width="150">
+    <img src=readme_results/turtle_tiger_xdis.gif width="200">
   </td>
   <td>
-    <img src=readme_results/turtle_tiger_DM.gif width="150">
+    <img src=readme_results/turtle_tiger_DM.gif width="200">
   </td>
   <td>
-    <img src=readme_results/turtle_tiger_BD.gif width="150">
-  </td>
-  </tr>
-  <tr>
-  <td>
-    <img src=readme_results/f1_surf_ours.gif width="150">
-  </td>
-  <td>
-    <img src=readme_results/f1_surf_xdis.gif width="150">
-  </td>
-  <td>
-    <img src=readme_results/f1_surf_DM.gif width="150">
-  </td>
-  <td>
-    <img src=readme_results/f1_surf_BD.gif width="150">
+    <img src=readme_results/turtle_tiger_BD.gif width="200">
   </td>
   </tr>
   <tr>
   <td>
-    <img src=readme_results/skyscraper_heliski_ours.gif width="150">
+    <img src=readme_results/f1_surf_ours.gif width="200">
   </td>
   <td>
-    <img src=readme_results/skyscraper_heliski_xdis.gif width="150">
+    <img src=readme_results/f1_surf_xdis.gif width="200">
   </td>
   <td>
-    <img src=readme_results/skyscraper_heliski_DM.gif width="150">
+    <img src=readme_results/f1_surf_DM.gif width="200">
   </td>
   <td>
-    <img src=readme_results/skyscraper_heliski_BD.gif width="150">
+    <img src=readme_results/f1_surf_BD.gif width="200">
+  </td>
+  </tr>
+  <tr>
+  <td>
+    <img src=readme_results/skyscraper_heliski_ours.gif width="200">
+  </td>
+  <td>
+    <img src=readme_results/skyscraper_heliski_xdis.gif width="200">
+  </td>
+  <td>
+    <img src=readme_results/skyscraper_heliski_DM.gif width="200">
+  </td>
+  <td>
+    <img src=readme_results/skyscraper_heliski_BD.gif width="200">
   </td>
   </tr> 
 </table>
