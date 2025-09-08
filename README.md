@@ -62,24 +62,24 @@ MSc Computer Graphics, Vision, and Imaging Thesis
 ## Startup Guide
 #### 1. Setup conda environment
 
-```shell
-git clone https://github.com/kan32501/MaskMorpher.git
-cd MaskMorpher
+```bash
+$ git clone https://github.com/kan32501/MaskMorpher.git
+$ cd MaskMorpher
 ```
 
-```
-conda create -n MaskMorpher python=3.10.14
-conda activate MaskMorpher
-pip install -r requirements.txt
+```bash
+$ conda create -n MaskMorpher python=3.10.14
+$ conda activate MaskMorpher
+$ pip install -r requirements.txt
 ```
 
 #### 2. Download required base models
 
 1. Download the [Gluestick](https://github.com/cvg/GlueStick) weights and put them in `./models/resources/weights`.
 
-   ```
-   wget https://github.com/cvg/GlueStick/releases/download/v0.1_arxiv/checkpoint_GlueStick_MD.tar -P models/resources/weights
-   ```
+```bash
+$ wget https://github.com/cvg/GlueStick/releases/download/v0.1_arxiv/checkpoint_GlueStick_MD.tar -P models/resources/weights
+```
 
 2. Download the  [DWPose](https://github.com/IDEA-Research/DWPose) pretrained weights `dw-ll_ucoco_384.onnx` and `yolox_l.onnx` [here](https://drive.google.com/drive/folders/1Ftv-jR4R8VtnOyy38EVLRa0yLz0-BnUY?usp=sharing), then put them in `./checkpoints/dwpose`. 
 
@@ -87,21 +87,20 @@ pip install -r requirements.txt
 
 #### 3. Run the inference script
 
-Run
-
-```
-python main.py 
+Run. Decrease `-n` to < 10 if receing `CUDA error: out of memory`
+```bash
+$ python main.py -n 12 -va "./example/video/turtle" -vb "./example/video/tiger" -ma "./example/masks/turtle-60_mask.png" -mb "./example/masks/tiger-0_mask.png"
 ```
 
 See `arguments.py` to customize input parameters.
 
+>   -n : number of intermediate frames, default=12\
+>   -va : path to directory of frames in videoA\
+>   -vb : path to directory of frames in videoB\
+>   -ma: path to mask for last frame in videoA\
+>   -mb: path to mask for first frame in videoB\
 >   --height : output frames height, default is 576\
 >   --width: output frames width, default is 1024\
->   --frame_count : number of intermediate frames\
->   --video0_frames_dir : path to directory of frames in first video\
->   --videoN_frames_dir : path to directory of frames in second video\
->   --frame0_mask_path: path to mask for last frame in first video\
->   --frameN_mask_path: path to mask for first frame in second video\
 
 
 ## Acknowledgements
