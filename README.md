@@ -8,13 +8,17 @@ MSc Dissertation: Generative Video Transitions. UCL Computer Graphics, Vision, a
 
 Animated Transition Results
 
-<table class="center">
-    <tr>
-        <td><img src=readme_results/tshirt_to_street_ours.gif width="250"></td>
-        <td><img src=readme_results/drill_wakeboard.gif width="250"></td>
-        <td><img src=readme_results/fish_lioness.gif width="250"></td>
-    </tr>
-<\table>
+<div class="row">
+  <div class="column">
+    <img src=readme_results/tshirt_to_street_ours.gif width="250">
+  </div>
+  <div class="column">
+    <img src=readme_results/drill_wakeboard.gif width="250">
+  </div>
+  <div class="column">
+    <img src=readme_results/fish_lioness.gif width="250">
+  </div>
+</div>
 
 Baseline Comparisons
 
