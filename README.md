@@ -118,4 +118,4 @@ See `arguments.py` to customize input parameters. Decrease `-n` to < 10 if recei
 
 ## Acknowledgements
 
-Thank you to the work of [Frame-wise Conditions-driven Video Generation](https://github.com/Tian-one/FCVG) &  [SEA-RAFT](https://github.com/princeton-vl/SEA-RAFT?tab=readme-ov-file), which our codebase is modeled from!
+Thank you to the work of [Frame-wise Conditions-driven Video Generation](https://github.com/Tian-one/FCVG), which our codebase is modeled from!
