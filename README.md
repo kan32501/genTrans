@@ -1,8 +1,8 @@
-# MaskMorpher: Generating Video Transitions with Line Matches
-### Mia Kan
+<<<<<<< HEAD
+# PAPER TITLE
 
-Sep 2025
-MSc Dissertation: Generative Video Transitions. UCL Computer Graphics, Vision, and Imaging
+DESCRIPTION
+>>>>>>> bffcb0f16cf910b25432c91cb0c5536cd25c7738
 
 ## Results
 
@@ -11,7 +11,11 @@ Animated Transition Results
 <p float="left">
   <img src="readme_results/tshirt_to_street_ours.gif" width="200" />
   <img src="readme_results/bicycle_wakeboard.gif" width="200" />
+<<<<<<< HEAD
   <img src="readme_results/fish_lioness.gif" width="200" />
+=======
+  <img src="readme_results/piste_skatepark.gif" width="200" />
+>>>>>>> bffcb0f16cf910b25432c91cb0c5536cd25c7738
 </p>
 
 Baseline Comparisons
@@ -73,6 +77,7 @@ Baseline Comparisons
 #### 1. Setup conda environment
 
 ```bash
+<<<<<<< HEAD
 $ git clone https://github.com/kan32501/MaskMorpher.git
 $ cd MaskMorpher
 ```
@@ -80,11 +85,25 @@ $ cd MaskMorpher
 ```bash
 $ conda create -n MaskMorpher python=3.10.14
 $ conda activate MaskMorpher
+=======
+$ git clone https://github.com/kan32501/<REPO-NAME>
+$ cd <REPO-NAME>
+```
+
+```bash
+$ conda create -n <REPO-NAME> python=3.10.14
+$ conda activate <REPO-NAME>
+>>>>>>> bffcb0f16cf910b25432c91cb0c5536cd25c7738
 $ pip install -r requirements.txt
 ```
 
 #### 2. Download required base models
 
+<<<<<<< HEAD
+=======
+Please refer to [Framewise Conditions-driven Video Generation](https://github.com/Tian-one/FCVG) (Steps 1-3) & [SEA-RAFT](https://github.com/princeton-vl/SEA-RAFT?tab=readme-ov-file) (Step 4) if there are any issues.
+
+>>>>>>> bffcb0f16cf910b25432c91cb0c5536cd25c7738
 1. Download the [Gluestick](https://github.com/cvg/GlueStick) weights and put them in `./models/resources/weights`.
 
 ```bash
@@ -105,7 +124,11 @@ Run.
 $ python main.py
 ```
 
+<<<<<<< HEAD
 See `arguments.py` to customize input parameters. Decrease `-n` to < 10 if receing `CUDA error: out of memory
+=======
+See `arguments.py` to customize input parameters. Decrease `-n` to < 10 if receiving `CUDA error: out of memory
+>>>>>>> bffcb0f16cf910b25432c91cb0c5536cd25c7738
 
 >   -frame_count : number of intermediate frames, default=12\
 >   -video0_frames_dir : path to directory of frames in videoA\
@@ -118,4 +141,8 @@ See `arguments.py` to customize input parameters. Decrease `-n` to < 10 if recei
 
 ## Acknowledgements
 
+<<<<<<< HEAD
 Thanks for the work of [Frame-wise Conditions-driven Video Generation](https://github.com/Tian-one/FCVG) &  [SEA-RAFT](https://github.com/princeton-vl/SEA-RAFT?tab=readme-ov-file). Our code is based on the implementation of them.
+=======
+Thank you to the work of [Frame-wise Conditions-driven Video Generation](https://github.com/Tian-one/FCVG), which our codebase is modeled from!
+>>>>>>> bffcb0f16cf910b25432c91cb0c5536cd25c7738
