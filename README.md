@@ -1,6 +1,6 @@
-# <PAPER TITLE>
+# PAPER TITLE
 
-<DESCRIPTION>
+DESCRIPTION
 
 ## Results
 
